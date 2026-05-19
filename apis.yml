@@ -8,18 +8,20 @@ description: Anadarko Petroleum Corporation was one of the world's largest indep
   primarily through enterprise systems for partners and joint venture operators.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-- Deepwater
-- Energy
-- Natural Gas
-- Oil And Gas
-- Petroleum
-- Upstream
+  - Deepwater
+  - Energy
+  - Natural Gas
+  - Oil And Gas
+  - Petroleum
+  - Upstream
 apis: []
 common:
-- type: Portal
-  url: https://www.anadarko.com
-- type: Website
-  url: https://www.oxy.com
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/anadarko-petroleum-corporation
+  - type: Portal
+    url: https://www.anadarko.com
+  - type: Website
+    url: https://www.oxy.com
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
