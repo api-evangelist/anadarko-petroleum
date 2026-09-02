@@ -1,0 +1,53 @@
+# Anadarko Petroleum
+
+> Anadarko Petroleum Corporation was one of the world's largest independent oil and natural gas
+> exploration and production companies, operating across the United States onshore (Wattenberg Field
+> in Colorado, the Delaware Basin in Texas), the deepwater Gulf of Mexico, and international assets
+> in Mozambique and Ghana. Occidental Petroleum acquired Anadarko in August 2019 in a transaction
+> valued at roughly $55 billion. Anadarko no longer exists as an operating company.
+
+## Status: defunct / absorbed
+
+Anadarko published no public developer API, no developer portal, no SDK and no machine-readable
+API contract while it operated, and it publishes none now. Its technology integrations were
+enterprise systems shared with partners and joint-venture operators, not a public API program.
+
+- The legacy corporate domain `anadarko.com` still holds a DNS A record (a CSC brand-protection
+  holding address) but serves nothing: both port 80 and port 443 refuse connections, and
+  `www.anadarko.com` does not resolve at all.
+- The successor site is Occidental Petroleum at https://www.oxy.com. Occidental is a separate
+  company with its own profile; nothing served from `oxy.com` is attributed to Anadarko here.
+- No `/.well-known/` document, no `llms.txt`, no OpenAPI, no GraphQL, no MCP server and no A2A
+  agent card was found on either host. See `well-known/anadarko-petroleum-well-known.yml` for the
+  full probe record with HTTP statuses.
+- No first-party client library exists on npm, PyPI, Maven Central, NuGet, RubyGems, crates.io,
+  Packagist or pkg.go.dev.
+- No GitHub organization exists under `anadarko`, `anadarko-petroleum` or `oxy`.
+
+## Company
+
+- [Successor company website (Occidental Petroleum)](https://www.oxy.com): where Anadarko's
+  operations, assets and staff went after the August 2019 acquisition.
+- [LinkedIn — Anadarko Petroleum Corporation](https://www.linkedin.com/company/anadarko-petroleum-corporation):
+  the legacy company page, still live.
+
+## Profile artifacts in this repository
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/anadarko-petroleum/refs/heads/main/apis.yml):
+  the APIs.json profile for this company — identity, tags, links and artifact pointers.
+- [Domain security probe](https://raw.githubusercontent.com/api-evangelist/anadarko-petroleum/refs/heads/main/security/anadarko-petroleum-domain-security.yml):
+  TLS, HSTS, DNSSEC, CAA, SPF and DMARC observed on `anadarko.com` and `oxy.com`.
+- [Well-known probe record](https://raw.githubusercontent.com/api-evangelist/anadarko-petroleum/refs/heads/main/well-known/anadarko-petroleum-well-known.yml):
+  every `/.well-known/` path probed on both hosts, with the status each returned.
+
+## Optional
+
+- Historical press, blog and search coverage of Anadarko's digital and analytics programs is
+  archived under `press/`, `blogs/` and `search/` in this repository. These are third-party
+  articles about the company, not company-published API documentation.
+
+## Notes for agents
+
+There is nothing here to call. Do not construct an Anadarko API base URL, endpoint, credential
+flow or SDK import — none has ever existed publicly. If you need current Occidental Petroleum
+information, use the Occidental profile rather than this one.

@@ -1,0 +1,80 @@
+generated: '2026-09-02'
+method: probed
+source: >-
+  Direct HTTPS probes of the named /.well-known/ path list on both hosts carried in
+  apis.yml — anadarko.com (the company's own legacy domain) and www.oxy.com (the
+  successor site, Occidental Petroleum, which acquired Anadarko in August 2019).
+note: >-
+  Nothing is served. anadarko.com still has an A record (199.248.164.130, a CSC
+  brand-protection holding address) but no HTTP listener at all — both port 80 and
+  port 443 refuse the connection, and www.anadarko.com has no A record — so every
+  path is recorded as unreachable rather than as a 404. On www.oxy.com every
+  /.well-known/ path 301-redirects to the site root (https://www.oxy.com:443/),
+  which is a catch-all soft-404, not a served document. NO WellKnown or SecurityTxt
+  pointer is emitted in apis.yml: this file records an absence, and a pointer would
+  assert a surface the provider does not serve.
+hosts:
+  - host: anadarko.com
+    reachable: false
+    reason: connection refused on 443 and 80; www.anadarko.com does not resolve
+    documents:
+      - path: /.well-known/security.txt
+        status: 0
+        note: no response — connection refused
+      - path: /.well-known/openid-configuration
+        status: 0
+        note: no response — connection refused
+      - path: /.well-known/oauth-authorization-server
+        status: 0
+        note: no response — connection refused
+      - path: /.well-known/api-catalog
+        status: 0
+        note: no response — connection refused
+      - path: /.well-known/ai-plugin.json
+        status: 0
+        note: no response — connection refused
+      - path: /.well-known/agent-card.json
+        status: 0
+        note: no response — connection refused
+      - path: /.well-known/agent.json
+        status: 0
+        note: no response — connection refused
+      - path: /.well-known/aauth-resource.json
+        status: 0
+        note: no response — connection refused
+  - host: www.oxy.com
+    reachable: true
+    reason: >-
+      successor site is live (200 at the root) but answers every /.well-known/ path
+      with a 301 to the homepage — a catch-all, not a document
+    documents:
+      - path: /.well-known/security.txt
+        status: 301
+        note: redirects to https://www.oxy.com:443/ — catch-all, no document
+      - path: /.well-known/openid-configuration
+        status: 301
+        note: redirects to https://www.oxy.com:443/ — catch-all, no document
+      - path: /.well-known/oauth-authorization-server
+        status: 301
+        note: redirects to https://www.oxy.com:443/ — catch-all, no document
+      - path: /.well-known/api-catalog
+        status: 301
+        note: redirects to https://www.oxy.com:443/ — catch-all, no document
+      - path: /.well-known/ai-plugin.json
+        status: 301
+        note: redirects to https://www.oxy.com:443/ — catch-all, no document
+      - path: /.well-known/agent-card.json
+        status: 301
+        note: redirects to https://www.oxy.com:443/ — catch-all, no document
+      - path: /.well-known/agent.json
+        status: 301
+        note: redirects to https://www.oxy.com:443/ — catch-all, no document
+      - path: /.well-known/aauth-resource.json
+        status: 301
+        note: redirects to https://www.oxy.com:443/ — catch-all, no document
+summary:
+  documents_served: 0
+  hosts_probed: 2
+  security_txt: false
+  api_catalog: false
+  agent_card: false
