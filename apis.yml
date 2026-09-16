@@ -26,42 +26,46 @@ accessModel:
   generated: '2026-07-22'
   method: derived
 created: '2026-04-19'
-modified: '2026-09-02'
+modified: '2026-09-15'
 name: Anadarko Petroleum
-description: Anadarko Petroleum Corporation was one of the world's largest independent oil and natural gas exploration and production companies, with operations across the United States, the deepwater
-  Gulf of Mexico, and international locations including Mozambique and Ghana. Anadarko was acquired by Occidental Petroleum in August 2019 in a $55 billion transaction. The company was known for its 
-  operations in the Wattenberg Gas Field in Colorado, the Delaware Basin in Texas, and major deepwater projects. Anadarko did not offer public developer APIs; its technology integrations were 
-  primarily through enterprise systems for partners and joint venture operators.
+description: Anadarko Petroleum Corporation was one of the world's largest independent oil and natural
+  gas exploration and production companies, with operations across the United States, the deepwater Gulf
+  of Mexico, and international locations including Mozambique and Ghana. Anadarko was acquired by Occidental
+  Petroleum in August 2019 in a $55 billion transaction. The company was known for its operations in the
+  Wattenberg Gas Field in Colorado, the Delaware Basin in Texas, and major deepwater projects. Anadarko
+  did not offer public developer APIs; its technology integrations were primarily through enterprise systems
+  for partners and joint venture operators.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/anadarko-petroleum.png
 tags:
-  - Deepwater
-  - Energy
-  - Natural Gas
-  - Oil and Gas
-  - Petroleum
-  - Upstream
-  - Fortune 500
+- Deepwater
+- Energy
+- Natural Gas
+- Oil and Gas
+- Petroleum
+- Upstream
+- Fortune 500
+- Defunct
 tags_raw:
-  - Deepwater
-  - Energy
-  - Natural Gas
-  - Oil And Gas
-  - Petroleum
-  - Upstream
-  - Fortune 500
+- Deepwater
+- Energy
+- Natural Gas
+- Oil And Gas
+- Petroleum
+- Upstream
+- Fortune 500
 apis: []
 common:
-  - type: DomainSecurity
-    url: security/anadarko-petroleum-domain-security.yml
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/anadarko-petroleum-corporation
-  - type: LLMsTxt
-    url: llms/anadarko-petroleum-llms.txt
-  - type: Website
-    url: https://www.oxy.com
+- type: DomainSecurity
+  url: security/anadarko-petroleum-domain-security.yml
+- type: LinkedIn
+  url: https://www.linkedin.com/company/anadarko-petroleum-corporation
+- type: LLMsTxt
+  url: llms/anadarko-petroleum-llms.txt
+- type: Website
+  url: https://www.oxy.com
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
 x-enrichment:
   date: '2026-09-02'
   status: minimal
@@ -70,20 +74,19 @@ x-enrichment:
 x-coverage:
   state: none
   reason: defunct
-  detail: >-
-    Anadarko was fully absorbed into Occidental Petroleum in August 2019 and its own domain now
-    serves nothing at all — anadarko.com keeps a CSC brand-protection A record but refuses the
-    connection on both port 80 and port 443, and www.anadarko.com has no A record — so there is no
-    surviving developer surface to profile.
+  detail: Anadarko was fully absorbed into Occidental Petroleum in August 2019 and its own domain now
+    serves nothing at all — anadarko.com keeps a CSC brand-protection A record but refuses the connection
+    on both port 80 and port 443, and www.anadarko.com has no A record — so there is no surviving developer
+    surface to profile.
   evidence:
-    - url: https://www.anadarko.com/
-      status: 0
-    - url: https://anadarko.com/
-      status: 0
-    - url: https://www.oxy.com/.well-known/security.txt
-      status: 301
-    - url: https://www.oxy.com/openapi.json
-      status: 404
+  - url: https://www.anadarko.com/
+    status: 0
+  - url: https://anadarko.com/
+    status: 0
+  - url: https://www.oxy.com/.well-known/security.txt
+    status: 301
+  - url: https://www.oxy.com/openapi.json
+    status: 404
   checked: '2026-09-02'
 x-parent: occidental-petroleum
 x-relationship: acquisition
