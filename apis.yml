@@ -26,7 +26,7 @@ accessModel:
   generated: '2026-07-22'
   method: derived
 created: '2026-04-19'
-modified: '2026-09-15'
+modified: '2026-09-16'
 name: Anadarko Petroleum
 description: Anadarko Petroleum Corporation was one of the world's largest independent oil and natural
   gas exploration and production companies, with operations across the United States, the deepwater Gulf
@@ -44,6 +44,7 @@ tags:
 - Petroleum
 - Upstream
 - Fortune 500
+- Defunct
 tags_raw:
 - Deepwater
 - Energy
@@ -52,6 +53,7 @@ tags_raw:
 - Petroleum
 - Upstream
 - Fortune 500
+- Defunct
 apis: []
 common:
 - type: DomainSecurity
